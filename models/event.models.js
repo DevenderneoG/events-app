@@ -15,8 +15,13 @@ const EventSchema = new mongoose.Schema(
       required: true,
     },
     eventBannerURl: {
-      type: String, // URL to the event banner image
+      type: String,
       required: true,
+    },
+    typeOfEvent: {
+      type: String,
+      enum: ["Online", "Offline", "Both"],
+      default: "Both",
     },
     sessionTimings: [
       {
