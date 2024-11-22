@@ -5,8 +5,9 @@ const app = express();
 const corsOptions = {
   origin: "*",
   credentials: true,
-  optionSuccessStatus: 200,
+  optionSuccessStatus: 200
 };
+
 app.use(cors(corsOptions));
 
 const { initializeDatabase } = require("./db/db.connect");
