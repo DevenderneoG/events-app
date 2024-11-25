@@ -20,8 +20,8 @@ const EventSchema = new mongoose.Schema(
     },
     typeOfEvent: {
       type: String,
-      enum: ["Online", "Offline", "Both"],
-      default: "Both",
+      enum: ["Online", "Offline", "Online & Offline"],
+      default: "Online & Offline",
     },
     sessionTimings: [
       {
